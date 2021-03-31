@@ -1,0 +1,41 @@
+.title {
+    color: rgb(129, 129, 129);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+.divider1 {
+    margin: auto;
+    padding-top: 0.3px;
+    background-color: rgb(180, 180, 180);
+    width: 77%;
+}
+.divider2 {
+    margin: auto;
+    margin-top: 11px;
+    padding-top: 0.3px;
+    background-color: rgb(180, 180, 180);
+    width: 77%;
+}
+.FOLDER {
+    display: flex;
+    align-items:flex-start;
+    margin: auto;
+    margin-top: 15px;
+    width: 77%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+.FOLDER:hover {
+    background-color: rgb(245, 245, 245);
+}
+.label {
+    text-decoration: none;
+    width: 100%;
+    margin-top: 4px;
+    margin-left: 10px;
+    color: rgb(129, 129, 129);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 450;
+}
