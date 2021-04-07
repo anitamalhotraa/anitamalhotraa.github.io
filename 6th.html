@@ -65,7 +65,7 @@
         </script>
         <script>
         var input = document.getElementsByClassName("enterpasscode");
-input.addEventListener("keyup", function(event) {
+input[0].addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     document.getElementsByClassName("submitpass")[0].click();
