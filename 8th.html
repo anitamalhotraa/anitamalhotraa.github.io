@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <head>
-    <title>8TH CLASS</title>
-    <link rel="stylesheet" href="index_css.css">
-    <script> </script>
+    <title>Please Enter Password</title>
+    <style>
+        .img1:hover {
+            transform: translateY(-7%);
+        }
+        .enterpasscode {
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+            border: 0px black;
+            font-size: 20px;
+            text-align: center;
+        }
+        .underline {
+            transition: 1s;
+            pointer-events: none;
+             width: 200px;
+             height: 100%;
+             border-bottom: 2px solid rgb(177, 177, 177);
+             display: block; margin-right: auto; margin-left: auto; margin-top: 0.5%;
+        }
+        .enterpasscode:focus + .underline{
+            border-bottom: 2px solid rgb(73, 188, 255);
+        }
+        .submitpass {
+            transition: 0.2s;
+            background-color: #fff;
+            border: 1px solid rgb(75, 174, 255);
+            font-family: 'Roboto', sans-serif;
+            border-radius: 75px;
+            outline: none;
+            display: block; margin-right: auto; margin-left: auto; margin-top: 1.5%;
+            padding: 10px;
+            padding-left: 22.5px;
+            padding-right: 22.5px;
+            color: rgb(126, 126, 126);
+            font-weight: 400;
+        }
+        .submitpass:hover {
+            background-color: rgb(75, 174, 255);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        .incorrect {
+            display: none;
+            color: red;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
 </head>
 <html>
     <body>
-        <h2 class="title">FILES</h2>
-        <div class="divider1"></div>
-        <div class="FOLDER_PARENT">
-            <div class="FOLDER">
-            <img style="margin-left: 10px;" src="https://findicons.com/files/icons/1579/devine/256/file.png" height="25px" width="25px">
-            <a href="./files/8th/CHAPTER_1.pdf" class="label">CHAPTER_1.PDF</a>
-            </div>
-            <div class="divider2"></div>
-        </div>
-        <div class="FOLDER_PARENT">
-            <div class="FOLDER">
-            <img style="margin-left: 10px;" src="https://findicons.com/files/icons/1579/devine/256/file.png" height="25px" width="25px">
-            <a href="./files/8th/CHAPTER_3.pdf" class="label">CHAPTER_3.PDF</a>
-            </div>
-            <div class="divider2"></div>
-        </div>
+        <script>
+            function submit() {
+                var content = document.getElementsByClassName("enterpasscode")[0].value;
+                if(content == "8th_E@2021") {
+                    window.location.href = "8TH_94P8RYHOE7488I7D67856786YW78O587";
+                }else{
+                    document.getElementsByClassName("incorrect")[0].style.display = "block";
+                }
+            }
+        </script>
+        <img class="img1" style="transition:0.45s; display: block; margin-right: auto; margin-left: auto; margin-top: 15%;"src="https://static.thenounproject.com/png/32202-200.png" height=125px width=125px>
+        <input placeholder="Enter Password" type="password" style="width: 175px;display: block; margin-right: auto; margin-left: auto; margin-top: 3%;" class="enterpasscode">
+        <label class="underline"></label>
+        <p class="incorrect">Incorrect password. Please try again.</p>
+        <button class="submitpass" onclick="submit()">Submit</button>
     </body>
 </html>
