@@ -54,6 +54,15 @@
 <html>
     <body>
         <script>
+document.getElementsByClassName("enterpasscde")[0]addEventListener("keydown", function(e) {
+    if (!e) {
+        var e = window.event;
+      }
+    e.preventDefault();
+    if (e.keyCode == 13) { 
+        document.getElementsByClassName("submitpass")[0].click;
+    }
+}, false);
             function submit() {
                 var content = document.getElementsByClassName("enterpasscode")[0].value;
                 if(content == "6th2021") {
@@ -62,15 +71,6 @@
                     document.getElementsByClassName("incorrect")[0].style.display = "block";
                 }
             }
-        </script>
-        <script>
-        var input = document.getElementsByClassName("enterpasscode");
-input[0].addEventListener('keydown', function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementsByClassName("submitpass")[0].click();
-  }
-});
         </script>
         <img class="img1" style="transition:0.45s; display: block; margin-right: auto; margin-left: auto; margin-top: 15%;"src="https://static.thenounproject.com/png/32202-200.png" height=125px width=125px>
         <input placeholder="Enter Password" type="password" style="width: 175px;display: block; margin-right: auto; margin-left: auto; margin-top: 3%;" class="enterpasscode">
