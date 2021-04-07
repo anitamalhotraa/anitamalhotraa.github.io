@@ -63,6 +63,15 @@
                 }
             }
         </script>
+        <script>
+        var input = document.getElementsByClassName("enterpasscode")[0];
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementsByClassName("submitpass")[0].click();
+  }
+});
+        </script>
         <img class="img1" style="transition:0.45s; display: block; margin-right: auto; margin-left: auto; margin-top: 15%;"src="https://static.thenounproject.com/png/32202-200.png" height=125px width=125px>
         <input placeholder="Enter Password" type="password" style="width: 175px;display: block; margin-right: auto; margin-left: auto; margin-top: 3%;" class="enterpasscode">
         <label class="underline"></label>
