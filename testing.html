@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Enter Password</title>
+  <style>
+   .lockimage {
+  transition: 0.1s;
+  display: block;
+  margin-top: 16%;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+.password {
+  font-family: 'Roboto', sans-serif;
+  transition: 0.3s;
+  text-align: center;
+  outline: none;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  border-bottom: gray 2px solid;
+  font-size: 17px;
+  width: 175px;
+  padding-bottom: 5px;
+}
+.password:focus{
+border-bottom:  #4262c9 2px solid;
+}
+</style>
+	<script> </script>
+</head>
+
+<body>
+	<script src="script.js">
+  var password = "6th2021";
+
+function shake() {
+  document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-3.5%)";
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(3.5%)";},100);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-3.5%)";},200);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(3%)";},300);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-1%)";},400);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(2%)";},500);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-2%)";},600);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(0%)";},700);
+}
+document.addEventListener('keyup', event =>{ 
+if(event.keyCode === 13) {
+  if(document.getElementsByClassName('password')[0].value == password) {
+    windowlocation.replace("./6TH_JKHF7834TR7IETG78934TYIUERFYHEUIYFR89463Y8HR987Y3IU4G7IT783U");
+  }else{
+    shake();
+  }
+}
+});
+	</script>
+	<img class='lockimage' src="./lock.png" height="150px" width="150px">
+  <input type="password" class='password' placeholder="Password">
+  </body>
+</html>
