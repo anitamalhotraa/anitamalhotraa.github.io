@@ -1,77 +1,67 @@
 <!DOCTYPE html>
-<head>
-    <title>Please Enter Password</title>
-    <style>
-        .img1:hover {
-            transform: translateY(-7%);
-        }
-        .enterpasscode {
-            font-family: 'Roboto', sans-serif;
-            outline: none;
-            border: 0px black;
-            font-size: 20px;
-            text-align: center;
-        }
-        .underline {
-            transition: 1s;
-            pointer-events: none;
-             width: 200px;
-             height: 100%;
-             border-bottom: 2px solid rgb(177, 177, 177);
-             display: block; margin-right: auto; margin-left: auto; margin-top: 0.5%;
-        }
-        .enterpasscode:focus + .underline{
-            border-bottom: 2px solid rgb(73, 188, 255);
-        }
-        .submitpass {
-            transition: 0.2s;
-            background-color: #fff;
-            border: 1px solid rgb(75, 174, 255);
-            font-family: 'Roboto', sans-serif;
-            border-radius: 75px;
-            outline: none;
-            display: block; margin-right: auto; margin-left: auto; margin-top: 1.5%;
-            padding: 10px;
-            padding-left: 22.5px;
-            padding-right: 22.5px;
-            color: rgb(126, 126, 126);
-            font-weight: 400;
-        }
-        .submitpass:hover {
-            background-color: rgb(75, 174, 255);
-            border: 1px solid #fff;
-            color: #fff;
-        }
-        .incorrect {
-            display: none;
-            color: red;
-            font-family: 'Roboto', sans-serif;
-            font-size: 13px;
-            text-align: center;
-        }
-    </style>
-</head>
 <html>
-    <body>
-        <script>
-            function submit() {
-                var content = document.getElementsByClassName("enterpasscode")[0].value;
-                if(content == "9th2021") {
-                    window.location.href = "9TH_KJHRTG44KRIDTNW57ONKJTHEKRJWTY5KUT47T";
-                }else{
-                    document.getElementsByClassName("incorrect")[0].style.display = "block";
-                }
-            }
-            document.getElementsByClassName("enterpasscode")[0];addEventListener("keydown", function(e) {
-                 if (e.keyCode === 13) { 
-                     submit();
-                 }
-        }, false);
-        </script>
-        <img class="img1" style="transition:0.45s; display: block; margin-right: auto; margin-left: auto; margin-top: 15%;"src="https://static.thenounproject.com/png/32202-200.png" height=125px width=125px>
-        <input placeholder="Enter Password" type="password" style="width: 175px;display: block; margin-right: auto; margin-left: auto; margin-top: 3%;" class="enterpasscode">
-        <label class="underline"></label>
-        <p class="incorrect">Incorrect password. Please try again.</p>
-        <button class="submitpass" onclick="submit()">Submit</button>
-    </body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Enter Password</title>
+  <style>
+   .lockimage {
+  transition: 0.1s;
+  display: block;
+  margin-top: 18%;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+.password {
+  font-family: 'Roboto', sans-serif;
+  transition: 0.3s;
+  text-align: center;
+  outline: none;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  border-bottom: gray 2px solid;
+  font-size: 17px;
+  width: 175px;
+  padding-bottom: 5px;
+}
+.password:focus{
+border-bottom:  #4262c9 2px solid;
+}
+</style>
+	<script> </script>
+</head>
+
+<body>
+	<script>
+  var password = "9th2021";
+
+function shake() {
+  document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-3.5%)";
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(3.5%)";},100);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-3.5%)";},200);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(3%)";},300);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-1%)";},400);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(2%)";},500);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(-2%)";},600);
+  setTimeout(function() {document.getElementsByClassName('lockimage')[0].style.transform = "translateX(0%)";},700);
+}
+document.addEventListener('keyup', event =>{ 
+if(event.keyCode === 13) {
+  if(document.getElementsByClassName('password')[0].value == password) {
+    window.location.replace("./9TH_KJHRTG44KRIDTNW57ONKJTHEKRJWTY5KUT47T");
+  }else{
+    shake();
+  }
+}
+});
+	</script>
+	<img class='lockimage' src="./lock.png" height="150px" width="150px">
+  <input type="password" class='password' placeholder="Password">
+  </body>
 </html>
